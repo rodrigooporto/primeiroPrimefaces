@@ -27,7 +27,8 @@ public class PerfilUsuarioBean implements Serializable {
 	}
 
 	private String nome;
-	private Interesse interesse;	
+	private Interesse interesse;
+	private String profissao;
 
 	public void atualizar() {
 		System.out.println("Interesse: " + this.interesse.getDescricao());
@@ -53,6 +54,14 @@ public class PerfilUsuarioBean implements Serializable {
 
 	public void setInteresse(Interesse interesse) {
 		this.interesse = interesse;
+	}
+
+	public String getProfissao() {
+		return profissao;
+	}
+
+	public void setProfissao(String profissao) {
+		this.profissao = profissao;
 	}
 
 }

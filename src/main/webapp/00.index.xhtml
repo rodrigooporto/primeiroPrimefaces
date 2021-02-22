@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head></h:head> 
+<h:body> 
+	<h:form id="frm">
+		<p:growl id="messages" />
+		
+		<p:menubar>
+			<p:submenu label="Modulo 1" icon="pi pi-file">
+				<p:menuitem value="Formulário simples com Primefaces" url="01.FormularioSimplesComPrimefaces.jsf" />
+				<p:menuitem value="Exemplo Input e Output Primefaces" url="01.inputOutputButton.jsf" />
+				<p:menuitem value="SelectOneMenu" url="02.perfilUsuarioSelectOneMenu.jsf" />
+				<p:menuitem value="SelectOneMenu com Imagens e colunas" url="03.perfilUsuarioSelectOneMenuImagens.jsf" />
+				<p:menuitem value="SelectOneMenu dependentes" url="04.selecaoDependentesSelectOneMenu.jsf" />
+			</p:submenu>
+			
+			<p:submenu label="Modulo 2 - Ajax" icon="pi pi-pencil">
+				<p:menuitem value="Ajax ao contar palavras" url="05.contarPalavrasComAjax.jsf" />			
+				<p:menuitem value="Ajax eventos" url="06.eventos.jsf" />			
+				<p:menuitem value="Ajax dois formulários" url="07.doisFormularios.jsf" />			
+				<p:menuitem value="Ajax lista atualizadas" url="08.listaAtualizadas.jsf" />			
+				<p:menuitem value="Ajax Processamento Parcial" url="09.ProcessamentoParcialAjax.jsf" />			
+				<p:menuitem value="Ajax Processamento Parcial com Eventos" url="10.ProcessamentoParcialAjaxAutomatico.jsf" />			
+				<p:menuitem value="Ajax Submissão Parcial de Formulários" url="11.SubmissaoParcialFormulario.jsf" />			
+			</p:submenu>
+			
+						
+		</p:menubar>
+	</h:form>
+</h:body> 
+</html>

@@ -16,6 +16,7 @@
 			
 			<p:outputLabel value="Estado" for="estado" />
 			<p:selectOneMenu id="estado" value="#{perfilUsuarioBeanEstadoCidade.estado}">
+				<!-- Componentes ajax para atualizar o cambo -->
 				<p:ajax event="change" process="@this" update="cidade" listener="#{perfilUsuarioBeanEstadoCidade.carregarCidades}"/>
 				<f:selectItem itemLabel="Selecione"/>
 				<f:selectItems value="#{perfilUsuarioBeanEstadoCidade.estados}" var="estado" itemLabel="#{estado}" itemValue="#{estado}"/>
@@ -23,13 +24,19 @@
 			
 			<p:outputLabel value="Cidade" for="cidade" />
 			<p:selectOneMenu id="cidade" value="#{perfilUsuarioBeanEstadoCidade.cidade}">
+				<p:ajax event="change" process="@this" update="bairro" listener="#{perfilUsuarioBeanEstadoCidade.carregarBairros}"/>
 				<f:selectItem itemLabel="Selecione"/>
 				<f:selectItems value="#{perfilUsuarioBeanEstadoCidade.cidades}" var="cidade" itemLabel="#{cidade}" itemValue="#{cidade}" />
 			</p:selectOneMenu>
 			
+			<p:outputLabel value="Bairro" for="bairro" />
+			<p:selectOneMenu id="bairro" value="#{perfilUsuarioBeanEstadoCidade.bairro}">
+				<f:selectItem itemLabel="Selecione"/>
+				<f:selectItems value="#{perfilUsuarioBeanEstadoCidade.bairros}" var="bairro" itemLabel="#{bairro}" itemValue="#{bairro}"/>			
+			</p:selectOneMenu>
+			
 		</p:panelGrid>
-		<p:commandButton value="Atualizar" action="#{perfilUsuarioBeanEstadoCidade.atualizar}" update="@form" />
-		<p:commandLink action="01-inputOutputButton">Clique</p:commandLink>
+		<p:commandButton value="Atualizar" action="#{perfilUsuarioBeanEstadoCidade.atualizar}" update="@form" />		
 	</h:form>
 </h:body> 
 </html>

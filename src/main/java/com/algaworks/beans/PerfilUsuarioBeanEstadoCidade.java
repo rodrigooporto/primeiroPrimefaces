@@ -19,8 +19,10 @@ public class PerfilUsuarioBeanEstadoCidade implements Serializable{
 	private String nome;
 	private String estado;
 	private String cidade;
+	private String bairro;
 	private List<String> estados = new ArrayList<>();
 	private List<String> cidades = new ArrayList<>();
+	private List<String> bairros = new ArrayList<>();
 	
 	
 	
@@ -48,6 +50,16 @@ public class PerfilUsuarioBeanEstadoCidade implements Serializable{
 			cidades.add("Palmas");
 			cidades.add("Paraíso");
 			cidades.add("Dianópolis");
+		}
+	}
+	
+	public void carregarBairros() {
+		bairros.clear();
+		if("Uberlândia".equals(cidade)) {
+			bairros.add("Uberlândia centro");
+			bairros.add("Uberlândia Pariferia");
+		}else if("Uberaba".equals(cidade)) {
+			bairros.add("Uberaba centro");
 		}
 	}
 
@@ -88,5 +100,17 @@ public class PerfilUsuarioBeanEstadoCidade implements Serializable{
 
 	public List<String> getCidades() {
 		return cidades;
+	}
+
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	public List<String> getBairros() {
+		return bairros;
 	}
 }

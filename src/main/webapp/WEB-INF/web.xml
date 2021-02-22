@@ -23,4 +23,10 @@
 		<param-name>javax.faces.WEBAPP_RESOURCES_DIRECTORY</param-name>
 		<param-value>/WEB-INF/resources</param-value>
 	</context-param>
+	
+	<!-- Com o parametro abaixo, configurado qualquer submissão ajax do projeto será parcial -->
+	<context-param>
+		<param-name>primefaces.SUBMIT</param-name>
+		<param-value>partial</param-value>
+	</context-param>
 </web-app>
