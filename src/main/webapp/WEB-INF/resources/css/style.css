@@ -1,0 +1,6 @@
+@charset "UTF-8";
+.ajax-status {
+	position: fixed;
+	right: 10px;
+	top: 5 px;
+}

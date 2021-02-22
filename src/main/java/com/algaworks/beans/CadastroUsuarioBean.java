@@ -14,6 +14,7 @@ public class CadastroUsuarioBean implements Serializable{
 	
 	private String login;
 	private String nome;
+	private String senha;
 	
 	public void cadastrar() {
 		System.out.println("Login: " + this.login);
@@ -23,6 +24,11 @@ public class CadastroUsuarioBean implements Serializable{
 	}
 	
 	public void verificarDisponibilidadeLogin() {
+		//Simular uma demora no carregamento
+		try {
+			Thread.sleep(1000);
+		} catch(InterruptedException e) {}
+		
 		FacesMessage msn = null;
 		System.out.println("Verificando disponibilidade." + this.login);
 		
@@ -47,6 +53,14 @@ public class CadastroUsuarioBean implements Serializable{
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 	
 	

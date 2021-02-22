@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
           http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-    version="3.0">
-    <!-- Lembrar de atualizar esse aquivo para versão 3.0 -->
+	version="3.0">
+	<!-- Lembrar de atualizar esse aquivo para versão 3.0 -->
 	<display-name>PrimeiroPrimefaces</display-name>
 	<servlet>
 		<servlet-name>Faces Servlet</servlet-name>
@@ -23,10 +23,17 @@
 		<param-name>javax.faces.WEBAPP_RESOURCES_DIRECTORY</param-name>
 		<param-value>/WEB-INF/resources</param-value>
 	</context-param>
-	
-	<!-- Com o parametro abaixo, configurado qualquer submissão ajax do projeto será parcial -->
+
+	<!-- Com o parametro abaixo, configurado qualquer submissão ajax do projeto 
+		será parcial -->
 	<context-param>
 		<param-name>primefaces.SUBMIT</param-name>
 		<param-value>partial</param-value>
+	</context-param>
+
+	<!-- Configuração do tema do primefaces -->
+	<context-param>
+		<param-name>primefaces.THEME</param-name>
+		<param-value>bootstrap</param-value>
 	</context-param>
 </web-app>
