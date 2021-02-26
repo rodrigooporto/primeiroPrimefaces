@@ -16,11 +16,16 @@ public class CalendarBean implements Serializable{
 	private String nome;
 	private Date dataNascimento;
 	
+	
 	public void atualizar() {
 		System.out.println("Nome: "+this.nome);
 		System.out.println("Data de Nascimento: "+this.dataNascimento);
 		
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Perfil Atualizado!"));
+	}
+	
+	public Date getDataHoje() {
+		return new Date();
 	}
 	
 	public String getNome() {

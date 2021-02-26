@@ -5,7 +5,8 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui"> 
 
-<h:head></h:head> 
+<h:head>
+</h:head> 
 <h:body> 
 	<h:form id="frm">
 		<p:messages />
@@ -16,7 +17,13 @@
 			
 			<p:outputLabel value="Data Nascimento" for="dataNascimento" />
 			<p:calendar id="dataNascimento" required="true" value="#{calendarBean.dataNascimento}" 
-				pattern="dd/MM/yyyy HH:mm:ss" readonlyInput="true" navigator="false" pages="1" mode="popup"/>
+				pattern="dd/MM/yyyy HH:mm:ss" 
+				readonlyInput="true" 
+				navigator="false" 
+				pages="1" 
+				mode="popup" 
+				maxdate="#{calendarBean.dataHoje}"
+				locale="pt"/>
 					
 		</p:panelGrid>
 		<p:commandButton value="Atualizar" action="#{calendarBean.atualizar}" update="@form"/>	
